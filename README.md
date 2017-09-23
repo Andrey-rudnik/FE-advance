@@ -1,1 +1,0 @@
-# Andrey-rudnik.github.io
