@@ -136,6 +136,7 @@ body {
 
 .content{
 	display: flex;
+	justify-content: space-around;
 	padding: 100px 57px 0 61px;	
 	background-color: #fff;
 }
@@ -161,7 +162,6 @@ h2{
 }
 
 .content-phone{
-	width: 208px;
 	padding-top: 80px;
 }
 
@@ -205,7 +205,6 @@ tr>td, .tel{
 }
 
 .content-contactUs{
-	width: 215px;
 	padding-left: 20px;
 }
 .contact-uc-pading-top{
