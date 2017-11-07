@@ -138,7 +138,7 @@ body {
 
 .image {
     width: 100%;
-    height: 17vh;
+    height: 155px;
     padding: 20px 20px 20px 0;  
 }
 
@@ -148,7 +148,7 @@ body {
     top: 20px;
     display: none;
     width: 100%;
-    height: 84%;
+    height: 80%;
     background-color: #000;
     opacity: 0.8;
 }
@@ -168,7 +168,6 @@ body {
 
 .wrapper-content-bottom {
     display: flex;
-    width: 1024px;
     padding: 43px 0 30px 0;
     background-color: #30455b;  
     align-items: center;
