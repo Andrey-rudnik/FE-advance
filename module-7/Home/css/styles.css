@@ -148,13 +148,11 @@ body {
 }
 .slider-image {
     width: 902px;
-    height:580px;
     position: absolute;
 }
 
 .slider-image-1 {
 	width: 902px;
-	height:580px;
     position: static;
 }
 
@@ -298,8 +296,7 @@ h2 {
 }
 
 .photo {   
-    width: 288px;
-	height: 270px;	
+    width: 288px;	
 }
 
 
