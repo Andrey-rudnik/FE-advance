@@ -1,0 +1,73 @@
+.button-circle {
+	position: fixed;
+	bottom: 4%;
+	right: 10%;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+    background-color: #38afe5;
+        &::before {
+        content: "\2039";
+        position: absolute;
+        left: 14px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+        transform: rotate(90deg);
+    }	
+}
+
+#svg {
+    display: none;  
+  }
+
+.svg-links{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 10px;
+        .icon {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        opacity: 0.8 ;
+        margin: 5px;
+        &:hover {
+        opacity: 1 ;
+        }
+    }
+}
+  
+.footer-social-who{
+    font-size: 9px;
+    line-height: 12px;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif; 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -ms-flexbox; 
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 21px;
+        .footer-social-who2{
+        border-right: 2px #fff solid;
+        border-left: 2px #fff solid;
+        margin: 0 3px;
+        padding: 0 3px;
+
+    }
+}
+
+
+
+  
+

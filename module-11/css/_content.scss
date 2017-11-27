@@ -1,0 +1,93 @@
+.content{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 59px 37px 36px 38px;
+    background-color: #fff;
+}
+
+.content-block-image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 39px; 
+    .block-image {
+        position: relative;
+        .image {
+            width: 100%;
+            padding: 20px 20px 20px 0;  
+        }   
+        .image-bg {
+            position: absolute;
+            top: 20px;
+            display: none;
+            width: 100%;
+            height: 84%;
+            background-color: #000;
+            opacity: 0.8;
+            }
+            & .image-bg::before {
+                content: url('../image/badge.png');
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 30px;
+            }          
+    }  
+    .block-image-img2, 
+    .block-image-img3{
+        display: none;
+    } 
+    .block-image:hover>.image-bg {
+        display: block;
+    }
+}
+
+.wrapperContentFooter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 62.7%;
+    padding: 4.5% 15.4% 6.8% 21.8%;
+    background-color: #30455b;
+    align-items: center;
+    justify-content: space-between;
+        .contentFooter {
+        display: flex;
+        color: #fff;
+        flex-direction: column;
+            & p,
+            .contentFooter__box {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 12px;
+            text-transform: uppercase;
+            padding-bottom: 14px; 
+            font-stretch: extra-condensed;
+            }
+        }
+}
+
+
+.contentFooter__box2-in1,
+.contentFooter__box2-in2 {
+    font-size: 10px;
+    font-family: 'Arial', sans-serif;  
+    line-height: 15px;
+    font-stretch: condensed;
+    text-transform: lowercase;
+    position: relative;
+    margin-left: 30px;
+    
+}
+
+.contentFooter__box2-in1::before{
+    content: url(../image/tell.png);
+    position: absolute;
+    top: -4px;
+    left: -20px;
+}
+.contentFooter__box2-in2::before{
+    content: url(../image/mail.png);
+    position: absolute;
+    left: -22px;
+}
