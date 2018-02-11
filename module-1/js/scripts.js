@@ -1,0 +1,20 @@
+const firstString = 'qwertyuiop[]';
+const secondString = 'asdfghjkl;';
+const thirdString = 'zxcvbnm,./';
+const fistNumber = 12;
+const secondNumber = 10;
+const thirdNumber = 10;
+console.log(firstString.charAt(0));
+console.log(firstString.charAt(11));
+console.log(secondString.charAt(0));
+console.log(secondString.charAt(9));
+console.log(thirdString.charAt(0));
+console.log(thirdString.charAt(9));
+console.log(firstString.indexOf('[]'));
+const firstStringIndexOf = 10;
+console.log(secondString.indexOf('[]'));
+const secondStringIndexOf = -1;
+console.log(thirdString.indexOf('[]'));
+const thirdStringIndexOf = -1;
+console.log(firstString + secondString + thirdString + fistNumber + secondNumber + thirdNumber + firstStringIndexOf +
+    secondStringIndexOf + thirdStringIndexOf);
