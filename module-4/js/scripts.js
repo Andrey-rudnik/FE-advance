@@ -19,7 +19,7 @@ console.log(addKeyboardLayout(alphabet));
 
 // ---2---
 
-let keyboardLayout = alphabet;
+let keyboardLayout = addKeyboardLayout(alphabet);;
 
 function getRandCharInRow(row) {
     let random = Math.floor(Math.random() * keyboardLayout[row].length);
