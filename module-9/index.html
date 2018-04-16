@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="buttons-container"></div>
+    <script type="text/termplate" id="buttons">
+        <div class="menu-list">
+            <% arrayString.forEach(item => { %>
+                <div class="menu-item">
+                    <% item.forEach(index => { %>
+                        <button class="keyboard__btn">
+                            <%- index %>   
+                        </button>
+                        <br>
+                        <% }) %>
+                </div>
+
+                <% }); %>
+                    <button class="keyboard__btn--space">space</button>
+        </div>
+    </script>
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js "></script>
+
+    <script src="js/scripts.js "></script>
+</body>
+
+</html>

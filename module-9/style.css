@@ -1,0 +1,9 @@
+.menu-item {
+    display: flex;
+}
+
+.keyboard__btn--active {
+    border: 1px solid transparent;
+    background-color: #03a9f4;
+    color: #fff;
+}
