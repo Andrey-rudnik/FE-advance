@@ -6,52 +6,33 @@
   модуля 8, подсветка нажатой клавиши, отображение символа итд.
 */
 
+
 const lang = {
-    en: "qwertyuiop[]asdfghjkl;'zxcvbnm,./"
-};
-let arrayString = [
-    [],
-    [],
-    [],
-];
+    en: [
+        ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]"],
+        ["a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'"],
+        ["z", "x", "c", "v", "b", "n", "m", ",", ".", "/"]
+    ]
 
-function pushToArray(index, array, number) {
-    array[index].push(number)
-}
-let keys = lang.en.split("");
-
-
-function addKeyboardLayout(alphabet) {
-    for (let i = 0; i < keys.length; i++) {
-        if (i <= 11) {
-            pushToArray(0, arrayString, keys[i]);
-        } else if (i > 11 && i < 23) {
-            pushToArray(1, arrayString, keys[i]);
-        } else {
-            pushToArray(2, arrayString, keys[i]);
-        }
-    }
 }
 
-addKeyboardLayout(lang.en)
-const html = document.querySelector('#buttons').textContent.trim();
 
-const compiled = _.template(html)(arrayString);
+const html = document.querySelector('#menu').textContent.trim();
+let compiled = _.template(html);
+const result = compiled(lang);
+let container = document.querySelector('.container');
+container.innerHTML = result;
 
-const container = document.querySelector('#buttons-container');
-container.innerHTML = compiled;
+const buttons = Array.from(document.querySelectorAll("button"));
+const keys = "qwertyuiop[]asdfghjkl;'zxcvbnm,./ ".split("");
 
-const buttons = Array.from(document.querySelectorAll("button"))
-console.log(container);
-
-window.addEventListener("keydown", function(e) {
+window.addEventListener('keydown', function(e) {
     if (keys.includes(e.key)) {
-        console.log(e.key);
-        let newButton = buttons.find((i) => i.innerHTML === e.key || i.innerHTML === "space")
-        console.log(newButton);
-        newButton.classList.add('keyboard__btn--active');
-        setTimeout(() => {
-            newButton.classList.remove('keyboard__btn--active');
-        }, 200);
+        let currentButton = buttons.find((a) => a.innerHTML === e.key || a.innerHTML === "space")
+        console.log(currentButton);
+        currentButton.classList.add('keyboard__btn--active');
+        setTimeout(() => currentButton.classList.remove('keyboard__btn--active'), 200);
+
+
     }
 });
