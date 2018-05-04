@@ -1,0 +1,20 @@
+body {
+    margin: 20%;
+    text-align: center;
+    border: 2px solid black;
+    padding-bottom: 10%;
+}
+
+.timer {
+    font-size: 2rem;
+}
+
+.exercise {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.keyboard button {
+    padding: 1rem;
+    font-size: 1.125rem;
+}
