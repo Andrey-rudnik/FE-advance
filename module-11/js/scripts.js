@@ -5,12 +5,14 @@
 функция getUserById(id) - должна вернуть пользователя с переданным id.
 функция addUser(name, age) - должна записывать в БД юзера с полями name и age.
 функция removeUser(id) - должна удалять из БД юзера по указанному id.
-функция updateUser(id, user) - должна обновлять данные пользователя по id. user это объект с новыми полями name и age.*/
+*/
 
 const btn = document.querySelector("#js-btn");
 const allUsers = document.querySelector('#all-users');
-const userById = document.querySelector('#btn-user');
-const outputOfUser = document.querySelector('#output-user');
+const btnUser = document.querySelector('#btn-user');
+const outputOfUser = document.querySelector('#window-user');
+const newUser = document.querySelector("#new-user");
+const btnRemove = document.querySelector("#btn-remove");
 
 const onClick = () => {
 
@@ -54,4 +56,47 @@ const getUserById = () => {
         })
 }
 
-userById.addEventListener("click", getUserById)
+btnUser.addEventListener("click", getUserById)
+
+const addUser = () => {
+    const name = (document.querySelector("#name")).value;
+    const age = (document.querySelector("#age")).value;
+    fetch('https://test-users-api.herokuapp.com/users', {
+            method: 'POST',
+            body: JSON.stringify({ name: "NEW", age: 12 }),
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(response => {
+            if (response.ok) return response.json();
+            throw new Error("Error fetching data");
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        })
+
+}
+newUser.addEventListener("click", addUser);
+
+const removeUser = () => {
+    const id = (document.querySelector("#remove-user")).value;
+    fetch(`https://test-users-api.herokuapp.com/users/${id}`, {
+            method: 'DELETE',
+            body: JSON.stringify({ name: "NEW", age: 12 }),
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(response => {
+            if (response.ok) return response.json();
+            throw new Error("Error fetching data");
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        })
+
+}
+btnRemove.addEventListener("click", removeUser);
